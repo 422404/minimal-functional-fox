@@ -289,7 +289,8 @@ toolbar#nav-bar {
 }
 
 
-.megabar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
+/* Prevent the urlbar from overflowing on the top of tabs when focused */
+#urlbar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
   box-shadow: none !important;
   background-color: transparent !important;
 }
@@ -298,6 +299,12 @@ toolbarbutton {
   box-shadow: none !important;
 }
 
+toolbarbutton image,
+toolbarbutton stack,
+.tab-close-button,
+.urlbar-icon {
+  border-radius: var(--mff-toolbar-button-border-radius) !important;
+}
 
 /*
   ___ ___ ___  ___ ___   _   ___
@@ -352,11 +359,4 @@ toolbarseparator {
   display: none;
 }
 
-
-toolbarbutton image,
-toolbarbutton stack,
-.tab-close-button,
-.urlbar-icon {
-  border-radius: var(--mff-toolbar-button-border-radius) !important;
-}
 
