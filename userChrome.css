@@ -14,7 +14,7 @@
   --mff-tab-pinned-bg: #70c1b3;
   --mff-tab-selected-bg: #dd1e4a;
   --mff-tab-soundplaying-bg: #9c89b8;
-  --mff-tab-close-button-border-radius: 1000px;
+  --mff-toolbar-button-border-radius: 1000px;
   --mff-urlbar-color: #98c1d9;
   --mff-urlbar-focused-color: #e0fbfc;
   --mff-urlbar-font-family: "Cantarell", serif;
@@ -75,9 +75,7 @@
 }
 
 .tab-close-button {
-  /* display: none !important; */
   visibility: hidden !important;
-  border-radius: var(--mff-tab-close-button-border-radius) !important;
 }
 
 .tabbrowser-tab:hover .tab-close-button {
@@ -353,3 +351,12 @@ image#sidebar-icon {
 toolbarseparator {
   display: none;
 }
+
+
+toolbarbutton image,
+toolbarbutton stack,
+.tab-close-button,
+.urlbar-icon {
+  border-radius: var(--mff-toolbar-button-border-radius) !important;
+}
+
