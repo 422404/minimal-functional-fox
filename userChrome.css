@@ -143,6 +143,11 @@ hbox.tab-content[pinned=true] .tab-text {
 #tabs-newtab-button {
   list-style-image: url("add.svg") !important;
   opacity: 0.7;
+  visibility: hidden !important;
+}
+
+toolbox:hover #tabs-newtab-button {
+    visibility: visible !important;
 }
 
 .tab-icon-sound {
@@ -207,8 +212,19 @@ hbox.tab-content[pinned=true] .tab-text {
   text-align: center !important;
 }
 
-#tracking-protection-icon-container, #identity-box {
-  display: none;
+#urlbar:not([breakout-extend]) #tracking-protection-icon-container,
+#urlbar:not([breakout-extend]) #identity-box {
+    display: none !important;
+}
+
+#identity-box #remote-control-icon,
+#identity-box #identity-icon-label {
+    display: none !important;
+}
+
+#tracking-protection-icon-container,
+#identity-box {
+    border-radius: var(--mff-toolbar-button-border-radius) !important;
 }
 
 #back-button > .toolbarbutton-icon{
