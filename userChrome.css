@@ -322,6 +322,11 @@ toolbarbutton stack,
   border-radius: var(--mff-toolbar-button-border-radius) !important;
 }
 
+#toolbar-menubar menubar,
+#toolbar-menubar spacer {
+    background-color: var(--mff-bg);
+}
+
 /*
   ___ ___ ___  ___ ___   _   ___
  / __|_ _|   \| __| _ ) /_\ | _ \
